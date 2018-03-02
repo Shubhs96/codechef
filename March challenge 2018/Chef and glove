@@ -1,0 +1,55 @@
+
+/*
+aurthor :- Shubham Saini
+ March Long Challenge 2018
+
+*/
+import java.util.HashSet;
+import java.util.Set;
+import java.util.Scanner;
+import java.io.*;
+class march
+{
+	public static void main(String[] args)throws IOException
+	{
+		Scanner sc=new Scanner(System.in);
+		int t=sc.nextInt();
+		while(t!=0)
+		{
+		    
+		   int n=sc.nextInt();
+		   long a[]=new long[n];
+		   for(int i=0;i<n;i++)
+		   {
+		       a[i]=sc.nextLong();
+		   }
+		   int c=0,c1=0;;
+        
+         Set arrSet = new HashSet();
+            for(Long val:a) 
+            {
+             
+             if(arrSet.add(val) == false) 
+             {
+                // System.out.println(val);
+                c++;
+             }
+             else{
+                 c1++;
+             }
+          }
+          if(c1==n)
+          {
+              System.out.println("0");
+          }
+          else if(c>0)
+          {
+              System.out.println(c);
+          }
+  
+		    
+		    t--;
+		}
+		
+		}
+	}
