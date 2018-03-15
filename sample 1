@@ -1,0 +1,26 @@
+/*
+author :- Shubham Saini
+ Codeforces 
+
+*/
+import java.util.Collections;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.Arrays;
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+ 
+public class march
+{   
+	public static void main (String[] args) throws IOException
+	{    
+	   Scanner in = new Scanner(System.in);
+		String s = in.nextLine().toLowerCase();
+		s = s.replaceAll("[aeiouy]", "").replaceAll("", ".");
+		System.out.print(s.substring(0,s.length() -1));
+	    //System.out.println(c);
+	    }
+	     
+	}
