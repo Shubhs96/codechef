@@ -1,3 +1,5 @@
+you can visit this blog for details [link](http://codeforces.com/blog/entry/7018)
+
 Using the BufferedReader class
 
 However, the Scanner class is slow and may cause a "timelimit exceeded". We can read the input faster with the BufferedReader class. The class "MyScanner" below uses a BufferedReader. The same method names as in the Scanner class have been chosen, e.g. to read the input as an integer we still can use nextInt().
