@@ -1,0 +1,68 @@
+/*
+author :- Shubham Saini
+  
+ 
+*/
+import java.util.Collections;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.Arrays;
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+ 
+ 
+public class march
+{   
+	public static void main (String[] args) throws IOException
+	{    
+	   Scanner sc = new Scanner(System.in);
+		
+	    int n=sc.nextInt();
+        String s=sc.next();
+        boolean ans=true;
+
+        for(int i=0;i<s.length()-1;i++)
+        {
+            if((s.charAt(i)==s.charAt(i+1)) && s.charAt(i)!='?')
+            {
+                ans=false;
+            }
+        }
+
+        if(ans==true)
+        {
+            ans=false;
+            if(s.charAt(0)=='?' || s.charAt(s.length()-1)=='?') 
+            {
+                ans=true;
+            }
+
+            for(int i=0;i<s.length()-1;i++)
+            {
+                if((s.charAt(i)==s.charAt(i+1)) && s.charAt(i)=='?')
+                
+                {
+                    ans=true;
+                    break;
+                    
+                }
+                if(i>0 && s.charAt(i)=='?' && (s.charAt(i-1)==s.charAt(i+1)) && s.charAt(i-1)!='?')
+                {
+                    ans=true;
+                    break;
+                }
+            }
+        }
+
+        if(ans==true) 
+        {
+            System.out.println("Yes");
+        }
+        else
+        {
+            System.out.println("No");
+        }
+	 }
+	     
+	}
