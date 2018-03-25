@@ -1,0 +1,50 @@
+//package com.company;
+
+/*
+author :- Shubham Saini
+
+
+*/
+
+import java.util.Collections;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.Arrays;
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+public class test2
+{
+	public static void main(String arg[])throws IOException
+	{
+		BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+		char s[]=br.readLine().toLowerCase().toCharArray();
+		int n=s.length,c=1,p=0;
+		if(n>3)
+		{
+			Arrays.sort(s);
+			for(int i=1;i<n;i++)
+				if(s[i]!=s[i-1])
+				{
+					c++;
+					p=i;
+				}
+			//System.out.println(c);
+			if(c>4)
+				System.out.println("No");
+			else if(c>2&&c<5)
+				System.out.println("Yes");
+			else if(c==2)
+			{
+				int l=p,r=n-p;
+				if(l>1&&r>1)
+					System.out.println("Yes");
+				else
+					System.out.println("No");
+			}
+			else System.out.println("No");
+		}
+		else System.out.println("No");
+	}
+}
